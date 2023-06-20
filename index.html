@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/futura-font@1.0.0/styles.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobiz-Advanced-Quick-Response-Code-Generator</title>
+    <style>
+        * {
+            font-family: FuturaBT-Medium;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background: #7D4040;
+            color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            padding: 10px;
+            width: 45vw;
+        }
+
+        img {
+            width: 45vw;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div><label><b>Mobiz-Advanced-Quick-Response-Code-Generator</b>
+                <br><br></label>
+            <input type="text" ng-model="yourName" placeholder="Enter a text or a URL here">
+        </div>
+
+        <a href="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data={{yourName}}" download>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data={{yourName}}">
+        </a>
+    </center>
+</body>
+
+</html>
